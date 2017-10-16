@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="grtest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Top View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pZ-gX-DpH" userLabel="Actions View">
+                                <rect key="frame" x="156" y="527" width="203" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-6Q-xoK">
+                                        <rect key="frame" x="122" y="8" width="73" height="30"/>
+                                        <state key="normal" title="Black Hole"/>
+                                        <connections>
+                                            <action selector="blackHoleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RuF-xC-cNQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHw-MO-kTq">
+                                        <rect key="frame" x="111" y="82" width="84" height="30"/>
+                                        <state key="normal" title=" Add Square"/>
+                                        <connections>
+                                            <action selector="addSquareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGo-sC-IJe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VHw-MO-kTq" secondAttribute="bottom" constant="8" id="R5t-uc-MYr"/>
+                                    <constraint firstAttribute="trailing" secondItem="RiQ-6Q-xoK" secondAttribute="trailing" constant="8" id="bhn-gr-sU7"/>
+                                    <constraint firstAttribute="trailing" secondItem="VHw-MO-kTq" secondAttribute="trailing" constant="8" id="emp-zi-8Bg"/>
+                                    <constraint firstItem="RiQ-6Q-xoK" firstAttribute="top" secondItem="0pZ-gX-DpH" secondAttribute="top" constant="8" id="ieF-TZ-2Im"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVE-Ko-7RE" userLabel="Circle View" customClass="HoleView" customModule="grtest" customModuleProvider="target">
+                                <rect key="frame" x="16" y="527" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7PK-xF-Un6"/>
+                                    <constraint firstAttribute="width" secondItem="fVE-Ko-7RE" secondAttribute="height" multiplier="1:1" id="XuL-dN-hVh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0pZ-gX-DpH" firstAttribute="leading" secondItem="fVE-Ko-7RE" secondAttribute="trailing" constant="20" id="Bkg-fw-bEf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fVE-Ko-7RE" secondAttribute="bottom" constant="20" id="bgB-f9-C91"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0pZ-gX-DpH" secondAttribute="bottom" constant="20" id="buE-My-GWu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0pZ-gX-DpH" secondAttribute="trailing" id="iWR-Mo-7Oc"/>
+                            <constraint firstItem="fVE-Ko-7RE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="juP-gA-yqW"/>
+                            <constraint firstItem="0pZ-gX-DpH" firstAttribute="top" secondItem="fVE-Ko-7RE" secondAttribute="top" id="uXN-sG-Od6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blackHoleView" destination="fVE-Ko-7RE" id="1hF-sa-XeQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="426"/>
+        </scene>
+    </scenes>
+</document>
